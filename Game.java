@@ -8,7 +8,7 @@ public class Game {
 
     public static void main(String[] args) {
         mapManager = new MapManager();
-        player = new Player("김시아", mapManager.getStartRoom());
+        player = new Player("이영호", mapManager.getStartRoom());
 
         System.out.println("=== 자바 MUD 게임 ===");
 
@@ -19,7 +19,7 @@ public class Game {
             switch (input) {
                 case "이동":
                     player.printAvailableDirections(); // 추가된 부분
-                    System.out.print("어느 방향? (북/남/동/서): ");
+                    System.out.print("어느 방향? ");
                     String dir = scanner.nextLine().trim();
                     player.move(dir);
                     break;
